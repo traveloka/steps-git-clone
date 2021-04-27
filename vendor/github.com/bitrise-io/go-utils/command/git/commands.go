@@ -45,7 +45,7 @@ func (g *Git) Checkout(arg string) *command.Model {
 // Merge joins two or more development histories together.
 // Arg can be a commit hash, branch or tag.
 func (g *Git) Merge(arg string) *command.Model {
-	return g.command("merge", arg)
+	return g.command("merge", arg, "--allow-unrelated-histories")
 }
 
 // Reset the current branch head to commit and possibly updates the index.
